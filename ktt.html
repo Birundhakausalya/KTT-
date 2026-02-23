@@ -9,10 +9,14 @@
     <title>Food spot</title>
     <!-- image icon element favicon -->
      <link rel="icon" href="image .png" type="image/png">
+     <!-- stylesheet link External tags -->
+     <link rel="stylesheet" href="style.css">
     <!-- css text -->
      <!-- styles -->
     <style>
-        /* text color change */
+        /* media Queries for responsive design */
+        @media (max-width: 600px){
+             /* text color change */
         body{
             background-image: url("image.png");
             background-repeat: repeat-x;
@@ -37,7 +41,22 @@
             background-color: transparent;
             text-decoration: underline;
         }
+    }
+    /* .container{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .box{
+        background-color:pink;
+        padding:20px;
+        text-align:center;
+    } */
+    /* flex Box */
+    /* text content */
         .text{
+            justify-content: right;
+            flex-direction: column;
             text-align:center;
             position:absolute;
             top:50%;
@@ -46,6 +65,7 @@
             font-size:18px;
             font-weight:bold;
             transform: translate(-50%, -40%);
+            /* grid-column: 1/4; */
         }
         .body{
     margin:0;
@@ -69,18 +89,31 @@
             padding:10px;
             text-align:center;
         }
+        /* .fa{
+            font-size:36px;
+            color:blue;
+        } */
     </style>
 </head>
      <!-- HTML Elements -->
 <body>
+<!-- <div class="container">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box6">6</div>
+    </div> -->
    <!-- heading -->
-    <h1 style="text-align:center"> The Food Spot</h1>
+    <!-- outline attribute -->
+    <h1 style="text-align:center; background-color:red; outline: 3px solid rgb(156, 23, 23); outline-offset:10px;"> The Food Spot</h1>
     <!-- attributes -->
     <div style="text-align:center;">
         <!-- file path -->
-<img src="https://t3.ftcdn.net/jpg/02/97/67/70/360_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg" alt="foodie" width="800px" height="650px">
+<img src="https://t3.ftcdn.net/jpg/02/97/67/70/360_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg" alt="foodie" width="800px" height="650px"><br><br>
 <!-- class attribute -->
-<div class="text">
+<div class="text"><br><br><br><br>
     <a href="https://www.zomato.com/coimbatore" target="_blank">Food Spot</a><br>
     <br>
      <button style="background-color:lightgreen; text-align:center;">Register</button>
@@ -94,20 +127,21 @@
        <!-- placeholder -->
      <form action="/ktt.html"><br>
         <label for="fname">First Name:</label>
-        <input type="text" placeholder="Enter your  First name" id="fname" name="fname" style="background-color:lightgrey;"><br><br>
+        <!-- autocomplete off -->
+        <input type="text" autocomplete="off" placeholder="Enter your  First name" id="fname" name="fname" style="background-color:lightgrey; border-radius: 10px; border:1px solid black;"><br><br>
         <label for="lname">Last Name:</label>
-        <input type="text" placeholder="Enter your Last name" id="lname" name="lname" style= "background-color:lightgrey;"><br><br>
+        <input type="text" placeholder="Enter your Last name" id="lname" name="lname" style= "background-color:lightgrey;border-radius: 10px; border:1px solid black;"><br><br>
         <label for="phone Number">Phone Number:</label>
-        <input type="tel" placeholder="Mobile Number" id="number" name="number" style="background-color:lightgrey;"><br><br>
+        <input type="tel" placeholder="Mobile Number" id="number" name="number" style="background-color:lightgrey;border-radius: 10px; border:1px solid black;"><br><br>
         <label for="email">Email:</label>
-        <input type="email" placeholder="Enter Email address" id="email" name="email" style="background-color:lightgrey;"><br><br>
+        <input type="email" placeholder="Enter Email address" id="email" name="email" style="background-color:lightgrey; border-radius: 10px; border:1px solid black;"><br><br>
         <label for="gender"> Gender:</label>
                 <!-- radio button -->
         <input type="radio" id="male" name="gender" value="male" style="text-shadow: 0 0 5px #000; background-color:lightgrey;">male
        <input type="radio" id="female" name="gender" value="female" style="text-shadow: 0 0 5px #000; background-color:lightgrey;">female<br><br>
              <!-- submit button / reset button -->
-           <button type="submit" style="background-color: azure;">Submit</button>
-        <button type="reset" style="background-color: azure;">Reset</button><br>
+           <button type="submit" style="background-color: azure;border:2px dotted black;">Submit</button>
+        <button type="reset" style="background-color: azure;border:2px dotted black;">Reset</button><br>
         <!-- svg graphics -->
         <svg width="100" height="40">
   <circle cx="50" cy="20" r="10" stroke="green" stroke-width="4" fill="yellow" />
@@ -136,13 +170,18 @@
         </table>
      </form>
     <hr>
+    <div style="text-align:center;">
+        <p style="border-color:pink ; border:dotted">LOOK AND TOOK</p>
+        </div>
     <!-- symbols -->
     <!-- Entities -->
     &copy;FOODSPOT@gamil.com
     
     <!-- button -->
      <!-- alert button -->
-     <button onclick="alert('HELLO! How can I help You?(❁´◡`❁)')" style="background-color:lightgreen; text-align:center; width:90px; height:50px;">Click Me</button>
+      <!-- span command (cursor)-->
+     <button onclick="alert('HELLO! How can I help You?(❁´◡`❁)')" style="background-color:lightgreen; cursor: wait; text-align:center; width:90px; height:20px;">Click Me</button>
+
     <!-- text formatting  & text quotations-->
     <p style="background-color:black;text-align:center;"><b>This cozy corner <mark>cafe serves</mark> the best <del>aromatic</del> <ins>delicious</ins> <i>coffee</i> and <q>freshly baked</q> .</b></p>
      <!-- use an image as a link -->
